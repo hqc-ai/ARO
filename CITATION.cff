@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "ARO — Adaptive Resource Orchestrator"
+version: "ver392026"
+date-released: 2026-09-04
+authors:
+  - family-names: Quang
+    given-names: "Nguyễn Đăng"
+license: MIT

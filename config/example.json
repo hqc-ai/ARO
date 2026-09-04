@@ -1,0 +1,7 @@
+{
+  "version": "ver392026",
+  "mode": "local-first",
+  "human_approval_required_for_policy_changes": true,
+  "cloud_allowed_for_private_data": false,
+  "poll_interval_seconds": 10
+}

@@ -1,0 +1,13 @@
+[build-system]
+requires = []
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aro"
+version = "392026.0.0"
+description = "Adaptive Resource Orchestrator reference implementation"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
