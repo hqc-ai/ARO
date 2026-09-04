@@ -67,6 +67,28 @@ Project initiated by **Nguyễn Đăng Quang** · Supported by **5SOffice**.
 
 If ARO helps you make better use of your existing hardware, build your AI Agent lab, or reduce unnecessary compute costs, consider supporting continued development. See [SUPPORT.md](SUPPORT.md).
 
+❤️ Support ARO
+
+Bank transfer — Vietnam & International
+Bank: Shinhan Bank Vietnam
+Account holder: NGUYEN DANG QUANG
+Account number: 0944659937
+SWIFT/BIC: SHBKVNVX
+Transfer reference: DONATE HQC AIMS
+HQC AIMS Community bank transfer QR code
+<img width="750" height="1085" alt="image" src="https://github.com/user-attachments/assets/1037042b-8ceb-4068-92f0-24cf75280902" />
+
+USDT — TRON (TRC20)
+Asset: Tether — USDT
+Network: TRON — TRC20
+Receiving address: TPNDgQnemyVjjhAuwSPSJz37BCaQrUkaj9
+HQC AIMS Community USDT TRC20 donation QR code
+<img width="750" height="1286" alt="image" src="https://github.com/user-attachments/assets/394373c2-eca7-4536-bf93-719d912214b2" />
+
+Verify the receiving address and blockchain network carefully before transferring. Cryptocurrency transactions are generally irreversible.
+
+Your contribution helps maintain the Community Edition, improve documentation, develop practical examples, and continue sharing useful AI governance resources.
+
 ## Public boundary
 
 This repository contains architecture, generic implementation, simulator code, example configuration, and synthetic data only. Never add credentials, private security configuration, real incident evidence, customer data, internal infrastructure details, or private prompts/workflows.
