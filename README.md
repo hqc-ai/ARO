@@ -89,7 +89,33 @@ Project initiated by **Nguyễn Đăng Quang** · Supported by **5SOffice**.
 
 ## Support ARO
 
-If ARO helps you make better use of your existing hardware, build your AI Agent lab, or reduce unnecessary compute costs, consider supporting continued development. See [SUPPORT.md](SUPPORT.md).
+If ARO helps you make better use of your existing hardware, build your AI Agent lab, or reduce unnecessary compute costs, consider supporting continued development. See:
+
+### Bank transfer — Vietnam & International
+
+- **Bank:** Shinhan Bank Vietnam
+- **Account holder:** NGUYEN DANG QUANG
+- **Account number:** `0944659937`
+- SWIFT/BIC: `SHBKVNVX`
+- **Transfer reference:** `DONATE HQC AIMS`
+
+<p align="center">
+  <img src="assets/donate/bank-qr.jpg" alt="HQC AIMS Community bank transfer QR code" width="300">
+</p>
+
+### USDT — TRON (TRC20)
+
+- **Asset:** Tether — USDT
+- **Network:** TRON — TRC20
+- **Receiving address:** `TPNDgQnemyVjjhAuwSPSJz37BCaQrUkaj9`
+
+<p align="center">
+  <img src="assets/donate/usdt-qr-trx.jpg" alt="HQC AIMS Community USDT TRC20 donation QR code" width="300">
+</p>
+
+> Verify the receiving address and blockchain network carefully before transferring. Cryptocurrency transactions are generally irreversible.
+
+Your contribution helps maintain the Community Edition, improve documentation, develop practical examples, and continue sharing useful AI SOC resources.
 
 ## Public boundary
 
