@@ -1,35 +1,31 @@
 # Roadmap
 
-## Phase 1 — ver392026
+## Phase 0 — Architecture Refactor
 
-Architecture, headless Core Scheduler, simulator, incident showcase, and dashboard demo.
+Positioning, repo structure, provider abstraction, CLI skeleton, evidence model, and policy model.
 
-## Phase 2
+## Phase 1 — Mini SOC macOS
 
-Automatic resource discovery and real local-node telemetry: CPU, RAM, GPU/VRAM, Apple Silicon, storage, network, runtimes, models, and tools.
+Local observation, evidence acquisition, baseline/delta, incident lifecycle, AI-assisted triage, and reporting.
 
-## Phase 3
+## Phase 2 — Windows / Linux
 
-Runtime adapters for Ollama, llama.cpp, MLX, OpenAI-compatible APIs, Anthropic-compatible APIs, MCP, and FreeToken.
+Platform collectors and normalized evidence schema.
 
-## Phase 4
+## Phase 3 — Multi-Agent Operations
 
-Multi-node ARO and a discoverable ARO Node protocol.
+Agent registry, scheduler, workflows, task routing, and agent-to-agent coordination.
 
-## Phase 5
+## Phase 4 — Control Plane
 
-ARO Desktop Alpha for Windows, Linux, and macOS when feasible.
+Dashboard, approvals, policy editor, evidence browser, incident view, and observability.
 
-## Phase 6
+## Phase 5 — App Ecosystem
 
-One-click Home Lab setup.
+ISO Audit, Compliance Monitoring, Office Operations, SEO Monitoring, and custom workflow packs.
 
-## Phase 7
+## Phase 6 — Desktop / Appliance Experience
 
-Community adapters and plugins.
-
-## Phase 8
-
-Production and small-business deployment patterns.
+An installable product experience for SMB and home-lab users, including local resource discovery and one-click setup where feasible.
 
 Release dates are intentionally not promised until planning is complete.

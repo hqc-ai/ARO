@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+import argparse, json
+from aro.demo import build
+from aro.core import snapshot
+
+def main():
+    p=argparse.ArgumentParser(prog="aro"); sub=p.add_subparsers(dest="command")
+    for name in ["init","status","agents","providers","apps","incidents"]: sub.add_parser(name)
+    for name in ["investigate","evidence","report"]: sub.add_parser(name).add_argument("incident_id")
+    run=sub.add_parser("run"); run.add_argument("app", choices=["mini-soc"]); run.add_argument("--profile", default="macos")
+    args=p.parse_args()
+    if args.command == "init": print("ARO initialized (local demo state; no secrets created)"); return
+    a=build()
+    if args.command == "run":
+        if args.app == "mini-soc":
+            import importlib.util
+            spec=importlib.util.spec_from_file_location("mini_soc", "apps/mini-soc/run.py"); module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+            result=module.run(args.profile); print(f"{args.app} [{args.profile}] → {result['incident'].incident_id}: read-only evidence workflow ready")
+        return
+    if args.command == "status": print(json.dumps(snapshot(a), indent=2)); return
+    if args.command == "agents": print("\n".join(a.agents.agents)); return
+    if args.command == "providers": print("Provider ports: ResourceProvider, ExecutionBackend, ModelProvider, ToolProvider, TelemetryProvider"); return
+    if args.command == "apps": print("mini-soc (macos experimental)"); return
+    print(f"{args.command}: experimental skeleton; see docs/ and examples/")
+if __name__ == "__main__": main()

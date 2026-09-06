@@ -1,0 +1,7 @@
+{
+  "incident_id": "incident-001",
+  "title": "Synthetic suspicious persistence change",
+  "status": "open",
+  "profile": "macos",
+  "notice": "Synthetic example only; no personal forensic data."
+}

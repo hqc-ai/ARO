@@ -1,4 +1,4 @@
-# ARO — Adaptive Resource Orchestrator
+# ARO — Agent Runtime & Operations Platform
 
 **ver392026**
 
@@ -6,7 +6,17 @@
 >
 > *Don't give every agent a GPU. Give every agent the right resource.*
 
-ARO is a lightweight reference implementation for adaptive, policy-aware orchestration of heterogeneous resources across many AI agents. It operates at the **agent/task layer**, deciding whether a task needs an LLM at all, then routing it to the right tool, local model, node, or cloud capability.
+ARO is an evidence-aware runtime and operations platform for multi-agent monitoring, investigation, automation, governance, and operational workflows. It is the entry point for the HQC-AI ecosystem: agents, tools, evidence workflows, and application packs run on a common runtime.
+
+ARO is not a model runtime or inference engine. OpenAI, Anthropic, Gemini, Bedrock, Ollama, vLLM, and FreeToken can be providers/backends. ARO decides what work should happen, where, under which policy, with which evidence and approval trail.
+
+### Why ARO?
+
+Generic agent flow: `Prompt → Agent → Tool → Result`.
+
+ARO flow: `Event → Evidence → Agent → Policy → Decision → Approval → Action → Verification → Audit Trail`.
+
+`Observation ≠ Evidence ≠ Finding ≠ Conclusion ≠ Action`.
 
 ### Product architecture
 
@@ -38,9 +48,9 @@ flowchart LR
 Requires Python 3.10+ and no third-party packages.
 
 ```bash
-python -m aro.demo --scenario normal
-python -m aro.demo --scenario incident
-python -m aro.dashboard
+python3 aroctl init
+python3 aroctl run mini-soc --profile macos
+python3 -m aro.dashboard
 ```
 
 Open <http://127.0.0.1:8080>. Click **Simulate Security Incident** to see watch agents detect an anomaly, incident work escalate, and lower-priority work defer. JSON API: `/api/state`.
@@ -50,6 +60,20 @@ Run tests:
 ```bash
 python -m unittest discover -s tests -v
 ```
+
+The Mini SOC workflow is experimental and read-only: it collects synthetic evidence, builds provenance, and requires human review. It does not quarantine files, terminate processes, modify hosts, or revoke credentials.
+
+## Maturity
+
+**Working now:** headless Runtime boundary, evidence/governance model foundation, provider ports, `aroctl` CLI, Mini SOC macOS read-only workflow, synthetic incident references, dashboard demo, scheduler, and tests.
+
+**Experimental:** agent operations, governance execution, app/workflow-pack model, and the current in-memory runtime state.
+
+**Planned:** Windows/Linux collectors, real provider integrations, automatic resource discovery, durable evidence storage, multi-node ARO, desktop control plane, production approval transport, and production security hardening.
+
+## HQC-AI Ecosystem
+
+If you are new to the HQC-AI ecosystem, start with ARO. ARO provides the runtime/platform layer; `hqc-codex-core-skills` can provide reusable skill packages; `ai-assisted-audit-investigation` provides investigation methodology, evidence reasoning, and reference framework. These projects remain separate and are not mechanically merged.
 
 ## What ARO is (and is not)
 
@@ -66,28 +90,6 @@ Project initiated by **Nguyễn Đăng Quang** · Supported by **5SOffice**.
 ## Support ARO
 
 If ARO helps you make better use of your existing hardware, build your AI Agent lab, or reduce unnecessary compute costs, consider supporting continued development. See [SUPPORT.md](SUPPORT.md).
-
-❤️ Support ARO
-
-Bank transfer — Vietnam & International
-Bank: Shinhan Bank Vietnam
-Account holder: NGUYEN DANG QUANG
-Account number: 0944659937
-SWIFT/BIC: SHBKVNVX
-Transfer reference: DONATE HQC AIMS
-HQC AIMS Community bank transfer QR code
-<img width="750" height="1085" alt="image" src="https://github.com/user-attachments/assets/1037042b-8ceb-4068-92f0-24cf75280902" />
-
-USDT — TRON (TRC20)
-Asset: Tether — USDT
-Network: TRON — TRC20
-Receiving address: TPNDgQnemyVjjhAuwSPSJz37BCaQrUkaj9
-HQC AIMS Community USDT TRC20 donation QR code
-<img width="750" height="1286" alt="image" src="https://github.com/user-attachments/assets/394373c2-eca7-4536-bf93-719d912214b2" />
-
-Verify the receiving address and blockchain network carefully before transferring. Cryptocurrency transactions are generally irreversible.
-
-Your contribution helps maintain the Community Edition, improve documentation, develop practical examples, and continue sharing useful AI governance resources.
 
 ## Public boundary
 
